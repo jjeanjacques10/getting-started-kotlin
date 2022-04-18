@@ -12,6 +12,11 @@ Examples of projects using Kotlin:
 
 - [Spring Boot](./projects/spring-boot)
 
+## File types
+
+- ``.kts`` Kotlin script
+- ``.kt`` Kotlin class
+
 ## Variables
 
 There are two ways to declare variables using Kotlin: ```val``` and ``var``.
@@ -74,6 +79,32 @@ try {
     // ...
 }
 ```
+
+## Properties
+
+Instead to use getters and setters we can use properties
+
+- Getter
+
+``` kotlin
+class Pokemon(val name: String, val type: String) {
+    val description: String
+        get() = "Pokemon ${name} is ${type} type"
+}
+```
+
+- Setter
+
+``` kotlin
+var power = 0.0
+    set(value) {
+        if (value > 0) {
+            field = value
+        }
+    }
+```
+
+Example: [03-properties.kts](./examples/03-properties.kts)
 
 ## References
 
