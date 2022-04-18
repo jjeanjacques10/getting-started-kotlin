@@ -106,6 +106,34 @@ var power = 0.0
 
 Example: [03-properties.kts](./examples/03-properties.kts)
 
+## Enum
+
+``` kotlin
+enum class Console {
+    GBA,
+    PLAYSTATION,
+    XBOX,
+    SWITCH,
+    PC
+}
+```
+
+Example: [04-enums.kts](./examples/04-enums.kts)
+
+## Class
+
+Creating a class using Enum
+
+``` kotlin
+class Game(val name: String,
+           val console: Console) {
+    fun play(): String {
+        return "You're playing $name on $console"
+    }
+}
+```
+
+
 ## References
 
 - [Learn the Kotlin programming language](https://developer.android.com/kotlin/learn?gclsrc=aw.ds&gclid=CjwKCAjw9e6SBhB2EiwA5myr9tk-mZhoAytl5-3nJeQ0lgYnyIGcs5GFh9-aN1tDvkwvcrFEAJZdLhoC0lAQAvD_BwE)
