@@ -133,6 +133,7 @@ class Game(val name: String,
 }
 ```
 
+Example: [05-classes.kt](./examples/05-classes.kt)
 
 ## References
 
