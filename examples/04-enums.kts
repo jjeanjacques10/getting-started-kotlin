@@ -1,15 +1,17 @@
-enum class Console {
-    GBA,
-    PLAYSTATION,
-    XBOX,
-    SWITCH,
-    PC
+enum class Console(val year: Int) {
+    GBA(2003),
+    PLAYSTATION(2000),
+    XBOX(2005),
+    SWITCH(2017),
+    PC(1946)
 }
 
-class Game(val name: String,
-           val console: Console) {
+class Game(
+    val name: String,
+    val console: Console
+) {
     fun play(): String {
-        return "You're playing $name on $console"
+        return "You're playing $name on $console (realeased at ${console.year})"
     }
 }
 

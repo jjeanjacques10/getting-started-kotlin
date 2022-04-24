@@ -135,6 +135,33 @@ class Game(val name: String,
 
 Example: [05-classes.kt](./examples/05-classes.kt)
 
+## Lists
+
+There is some ways to create lists in Kotlin
+
+````kotlin
+var digimons = mutableListOf("Agumon", "Tailmon", "Angemon")
+var digimons = listOf("Agumon", "Tailmon", "Angemon")
+val digimonPower: MutableMap<Int, Int> = mutableMapOf(0 to 50, 1 to 50, 2 to 100)
+````
+
+## When
+
+When is similar Java Switch
+
+``` kotlin
+fun getPrice(console: Console): Int =
+    when (console) {
+        Console.GBA -> 1000
+        Console.PLAYSTATION -> 5299
+        Console.SWITCH -> 2500
+        Console.XBOX -> 4200
+        Console.PC -> 5000
+    }
+```
+
+Example: [06-when.k](./examples/06-when.kt)
+
 ## References
 
 - [Learn the Kotlin programming language](https://developer.android.com/kotlin/learn?gclsrc=aw.ds&gclid=CjwKCAjw9e6SBhB2EiwA5myr9tk-mZhoAytl5-3nJeQ0lgYnyIGcs5GFh9-aN1tDvkwvcrFEAJZdLhoC0lAQAvD_BwE)
