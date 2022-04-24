@@ -160,12 +160,43 @@ fun getPrice(console: Console): Int =
     }
 ```
 
-Example: [06-when.k](./examples/06-when.kt)
+Example: [06-when.kt](./examples/06-when.kt)
+
+## Maps
+
+Example of how to iterate over a map
+
+``` kotlin
+val binaryRepresentation = TreeMap<Char, String>()
+
+for (c in 'A'..'F') {
+    val binary = Integer.toBinaryString(c.toInt())
+    binaryRepresentation[c] = binary
+}
+
+for ((letter, binary) in binaryRepresentation) {
+    println("$letter - $binary")
+}
+```
+
+Example: [08-interatingovermap.kt](./examples/08-interatingovermap.kt)
+
+## In
+
+It's possible to use "in" in a conditional
+
+``` kotlin
+fun isLetter(c: Char) = c in 'a'..'z' || c in 'A'..'Z'
+fun isNotDigit(c: Char) = c !in '0'..'9'
+```
+
+Example: [09-inoperation.kt](./examples/09-inoperation.kt)
 
 ## References
 
 - [Learn the Kotlin programming language](https://developer.android.com/kotlin/learn?gclsrc=aw.ds&gclid=CjwKCAjw9e6SBhB2EiwA5myr9tk-mZhoAytl5-3nJeQ0lgYnyIGcs5GFh9-aN1tDvkwvcrFEAJZdLhoC0lAQAvD_BwE)
 - [Get started with Kotlin - KotlinLang.org](https://kotlinlang.org/docs/getting-started.html)
+- [Curso de Kotlin 2020 | Básico](https://www.youtube.com/playlist?list=PLPs3nlHFeKTr-aDDvUxU971rPSVTyQ6Bn)
 
 ---
 developed by [Jean Jacques Barros](https://github.com/jjeanjacques10)
