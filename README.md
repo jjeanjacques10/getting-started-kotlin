@@ -143,6 +143,9 @@ There is some ways to create lists in Kotlin
 var digimons = mutableListOf("Agumon", "Tailmon", "Angemon")
 var digimons = listOf("Agumon", "Tailmon", "Angemon")
 val digimonPower: MutableMap<Int, Int> = mutableMapOf(0 to 50, 1 to 50, 2 to 100)
+
+// Empty List
+var pokemons = arrayListOf<String>()
 ````
 
 ## When
