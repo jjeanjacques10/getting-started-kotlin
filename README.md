@@ -195,6 +195,22 @@ fun isNotDigit(c: Char) = c !in '0'..'9'
 
 Example: [09-inoperation.kt](./examples/09-inoperation.kt)
 
+## Mock
+
+We can use [Mockito](https://github.com/mockito/mockito), but the best lib to mock using kolint is [Mockk](https://github.com/mockk/mockk)
+
+``` kotlin
+val car = mockk<Car>()
+
+every { car.drive(Direction.NORTH) } returns Outcome.OK
+
+car.drive(Direction.NORTH) // returns OK
+
+verify { car.drive(Direction.NORTH) }
+
+confirmVerified(car)
+```
+
 ## References
 
 - [Learn the Kotlin programming language](https://developer.android.com/kotlin/learn?gclsrc=aw.ds&gclid=CjwKCAjw9e6SBhB2EiwA5myr9tk-mZhoAytl5-3nJeQ0lgYnyIGcs5GFh9-aN1tDvkwvcrFEAJZdLhoC0lAQAvD_BwE)
